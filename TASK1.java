@@ -1,3 +1,4 @@
+package CODSOFT;
 import java.util.Random;
 import java.util.Scanner;
 public class TASK1 {
@@ -6,7 +7,7 @@ public class TASK1 {
         Random num=new Random();
         int totalRounds=0;
         int roundwon=0;
-        System.out.println("Welcome to the guessing game");
+        System.out.println("Welcome to the Number Game");
         do{
             System.out.println("New round");
             int computernumber=num.nextInt(100)+1;
@@ -17,7 +18,6 @@ public class TASK1 {
                 int userguess=sc.nextInt();
                 if(computernumber==userguess){
                     System.out.println("The guess is correct!");
-                    totalRounds++;
                     roundwon++;
                     break;
                 }
@@ -32,9 +32,7 @@ public class TASK1 {
                 }
                 attempts++;
             }
-            if (attempts>maxAttempts) {
-                totalRounds++;
-            }
+            totalRounds++;
             System.out.println("Play the game again!");
             System.out.print("Enter yes/no:");
             String play=sc.next().toLowerCase();
@@ -43,6 +41,7 @@ public class TASK1 {
             }
             System.out.println();
         }while(true);
+        System.out.println();
         System.out.println("After the game play");
         System.out.println("Total rounds played:"+totalRounds);
         System.out.println("Rounds Won:"+roundwon);
