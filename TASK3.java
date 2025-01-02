@@ -47,7 +47,7 @@ class ATM {
         System.out.print("Choose an your choice: ");
     }
     public void checkBalance(){
-        System.out.println("Current Balance: "+acc.getBalance());
+        System.out.println("Current Balance:"+acc.getBalance());
     }
     public void deposit(double amount){
         acc.deposit(amount);
